@@ -1,41 +1,45 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, LayoutTemplate, CalendarSearch, BugOff } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
     {
       title: "Website Development",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-      icon: "🌐",
+        "We design and develop clean, modern, responsive websites that not only look great but also convert. Your brand's digital presence is built to stand out and perform.",
+      icon: <LayoutTemplate size={28} />, 
     },
     {
-      title: "Mobile App Development",
+      title: "SEO Optimization",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-      icon: "📱",
+        "We help your business get discovered by the right audience. Through strategic SEO practices, we improve your rankings, boost visibility, and drive organic growth.",
+      icon: <CalendarSearch size={28} />, 
     },
     {
-      title: "UI/UX Design",
+      title: "Web Maintenance",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-      icon: "🎨",
+        "Keep your website running smoothly with ongoing updates, security checks, content updates, and performance optimizations—so you can focus on your business.",
+      icon: <BugOff size={28} />, 
     },
   ];
 
   return (
     <section id="services" className="py-20 bg-[#f9fafb] text-gray-800">
       <div className="max-w-6xl mx-auto px-6">
+  
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row items-center justify-between mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <p className="text-blue-500 font-medium">// Our Services</p>
+            <p className="text-gray-500 font-semibold">
+              <span className="text-blue-500 mr-1">//</span> Our Services
+            </p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
-              Services We Provide to{" "}
+              <span> Services We Provide to{" "} </span><br />
               <span className="text-blue-600">Elevate Your Business</span>
             </h2>
           </div>
-          <button className="mt-6 md:mt-0 bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-full">
+
+          <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold mt-10 px-6 py-3 rounded-full transition">
             View All Services
           </button>
         </div>
@@ -47,21 +51,25 @@ const ServicesSection = () => {
               key={index}
               className="bg-white shadow-md rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition"
             >
-              <div className="flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-xl text-3xl mb-6">
+              <div className="flex items-center justify-center w-16 h-16 bg-blue-400 text-white rounded-xl mb-6">
                 {service.icon}
               </div>
+
               <h3 className="text-lg font-semibold mb-3 text-gray-900">
                 {service.title}
               </h3>
-              <p className="text-gray-500 mb-6 text-sm leading-relaxed">
+
+              <p className="text-gray-700 mb-6 text-sm leading-relaxed">
                 {service.description}
               </p>
+
               <button className="flex items-center gap-2 text-blue-600 font-medium hover:gap-3 transition-all">
                 Learn more <ArrowRight size={16} />
               </button>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

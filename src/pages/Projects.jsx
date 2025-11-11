@@ -2,22 +2,22 @@ export default function Projects() {
   const projects = [
     {
       title: "Care Connect - Doctor Appointment App",
-      image: "https://via.placeholder.com/600x400.png?text=Project+Image+1",
+      image: "/images/agency.png",
       tags: ["UI/UX Design", "App Design", "Wireframe"],
     },
     {
       title: "Dental - Dentist and Dental Clinic Website UI/UX Design",
-      image: "https://via.placeholder.com/600x400.png?text=Project+Image+2",
+      image: "/images/Portfolio.png",
       tags: ["UI/UX Design", "Web Design", "Wireframe"],
     },
     {
       title: "Car Rental - Car Rental Booking Mobile App",
-      image: "https://via.placeholder.com/600x400.png?text=Project+Image+3",
+      image: "/images/drip coat clone.png",
       tags: ["UI/UX Design", "App Design", "Wireframe"],
     },
     {
       title: "Hotel Booking - Hotel Booking App Landing Page UI/UX Design",
-      image: "https://via.placeholder.com/600x400.png?text=Project+Image+4",
+      image: "/images/Rexium.png",
       tags: ["UI/UX Design", "Landing Page", "Wireframe"],
     },
   ];

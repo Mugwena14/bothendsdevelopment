@@ -5,58 +5,55 @@ const AboutSection = () => {
     return (
     <section id="about" className="bg-white text-gray-900 py-20 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Left Side - Image Grid */}
-<div className="relative md:w-1/2 space-y-4">
+        <div className="relative md:w-1/2 space-y-4">
 
 
-  {/* One Large Sparkle */}
-  <IoSparklesSharp className="absolute -bottom-10 -left-10 text-blue-700 text-8xl opacity-90" />
+        {/* One Large Sparkle */}
+        <IoSparklesSharp className="absolute -bottom-10 -left-10 text-blue-700 text-8xl opacity-90" />
 
-  {/* TOP ROW */}
-  <div className="flex gap-4">
-    {/* Top Left — wider */}
-    <div className="flex-[1.6] overflow-hidden">
-      <img
-        src="/images/team-work.jpeg"
-        alt="Team working together"
-        className="w-full h-[260px] object-cover rounded-sm rounded-tl-[110px]"
-      />
-    </div>
+        {/* TOP ROW */}
+        <div className="flex gap-4">
+            {/* Top Left — wider */}
+            <div className="flex-[1.6] overflow-hidden">
+            <img
+                src="/images/team-work.jpeg"
+                alt="Team working together"
+                className="w-full h-[260px] object-cover rounded-sm rounded-tl-[110px]"
+            />
+            </div>
 
-    {/* Top Right — narrower */}
-    <div className="flex-[1] overflow-hidden">
-      <img
-        src="/images/leadership.jpeg"
-        alt="Business leader"
-        className="w-full h-[260px] object-cover rounded-sm rounded-tr-[120px]"
-      />
-    </div>
-  </div>
+            {/* Top Right — narrower */}
+            <div className="flex-[1] overflow-hidden">
+            <img
+                src="/images/leadership.jpeg"
+                alt="Business leader"
+                className="w-full h-[260px] object-cover rounded-sm rounded-tr-[120px]"
+            />
+            </div>
+        </div>
 
-  {/* BOTTOM ROW */}
-  <div className="flex gap-4">
-    {/* Bottom Left — narrower */}
-    <div className="flex-[1.2] overflow-hidden rounded-sm rounded-bl-[100px]">
-      <img
-        src="/images/meeting.jpeg"
-        alt="Office meeting"
-        className="w-full h-[220px] object-cover"
-      />
-    </div>
+        {/* BOTTOM ROW */}
+        <div className="flex gap-4">
+            {/* Bottom Left — narrower */}
+            <div className="flex-[1.2] overflow-hidden rounded-sm rounded-bl-[100px]">
+            <img
+                src="/images/meeting.jpeg"
+                alt="Office meeting"
+                className="w-full h-[220px] object-cover"
+            />
+            </div>
 
-    {/* Bottom Right — wider */}
-    <div className="flex-[1.4] overflow-hidden">
-      <img
-        src="/images/office.jpeg"
-        alt="Work environment"
-        className="w-full h-[220px] object-cover rounded-sm rounded-br-[90px]"
-      />
-    </div>
-  </div>
+            {/* Bottom Right — wider */}
+            <div className="flex-[1.4] overflow-hidden">
+            <img
+                src="/images/office.jpeg"
+                alt="Work environment"
+                className="w-full h-[220px] object-cover rounded-sm rounded-br-[90px]"
+            />
+            </div>
+        </div>
 
-</div>
-
-
-
+        </div>
 
 
         {/* Right Side - Text Content */}
