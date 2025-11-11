@@ -37,7 +37,7 @@ const AboutSection = () => {
 
         {/* Right Side - Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
-        <p className="text-blue-500 font-medium mb-2">// About Us</p>
+        <p className="text-white-500 font-semibold mb-2"><span className="text-blue-500 mr-1">//</span> About Us</p>
         <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
             Transforming <span className="text-blue-600">Ideas</span> into Digital Reality
         </h2>

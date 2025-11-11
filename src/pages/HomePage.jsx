@@ -9,10 +9,14 @@ import Projects from "./Projects";
 import ContactSection from "./ContactPage";
 import Testimonials from "./Testimonials";
 import Footer from "./Footer";
-import { Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Phone, Mail, Facebook, Twitter, Linkedin, Instagram, Sparkle } from "lucide-react";
+import ScrollVelocity from '../components/ScrollVelocity';
 
 const HomePage = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  
+  const velocity = 80;
+
 
   const navLinks = [
     { name: "Home", path: "/", isScroll: true },
@@ -169,62 +173,68 @@ const HomePage = () => {
       </nav>
 
       {/* Hero Section */}
-<section
-  className="relative flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-24 bg-cover bg-center bg-no-repeat"
-  style={{ backgroundImage: "url('/images/hero.jpg')" }}
->
-  {/* Smooth Soft Blur on Left Side */}
-  <div
-    className="absolute inset-0 pointer-events-none"
-    style={{
-      backdropFilter: "blur(6px)",
-      WebkitBackdropFilter: "blur(6px)",
-      maskImage:
-        "linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%)",
-      WebkitMaskImage:
-        "linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%)",
-    }}
-  ></div>
+      <section
+        className="relative flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-24 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/images/hero.jpg')" }}
+      >
+        {/* Smooth Soft Blur on Left Side */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backdropFilter: "blur(6px)",
+            WebkitBackdropFilter: "blur(6px)",
+            maskImage:
+              "linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%)",
+          }}
+        ></div>
 
-  {/* Darkening Overlay */}
-  <div className="absolute inset-0 bg-black/40"></div>
+        {/* Darkening Overlay */}
+        <div className="absolute inset-0 bg-black/40"></div>
 
-  <div className="relative max-w-xl z-10 text-white">
-    <p className="font-semibold mb-3">
-      <span className="mr-1 text-blue-400">//</span> Experience The Best IT Solutions
-    </p>
+        <div className="relative max-w-xl z-10 text-white">
+          <p className="font-semibold mb-3">
+            <span className="mr-1 text-blue-400">//</span> Experience The Best IT Solutions
+          </p>
 
-    <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-      Where Creativity <br /> Meets Cutting-Edge <br /> Technology
-    </h1>
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+            Where Creativity <br /> Meets Cutting-Edge <br /> Technology
+          </h1>
 
-    <p className="text-gray-200 font-medium mb-8">
-      We merge creativity with high-end engineering to deliver solutions that 
-      solve real problems and move businesses forward.
-    </p>
+          <p className="text-gray-200 font-medium mb-8">
+            We merge creativity with high-end engineering to deliver solutions that 
+            solve real problems and move businesses forward.
+          </p>
 
-    <div className="flex gap-4">
-      <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-medium">
-        Explore More
-      </button>
-      <button className="border border-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-full font-medium">
-        View All Services
-      </button>
-    </div>
-  </div>
-</section>
-
+          <div className="flex gap-4">
+            <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-medium">
+              Explore More
+            </button>
+            <button className="border border-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-full font-medium">
+              View All Services
+            </button>
+          </div>
+        </div>
+      </section>
 
 
 
       {/* Services Strip */}
       <section className="bg-blue-600 text-white py-6">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 text-center text-lg font-medium">
-          <span>Website Development</span>
-          <span className="hidden md:block">✳️</span>
-          <span>UX/UI Design</span>
-          <span className="hidden md:block">✳️</span>
-          <span>Graphics Design</span>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-center font-base">
+          <ScrollVelocity
+            texts={[
+              'Website Development',
+              <Sparkle key="icon1" />,
+              'Search Engine Optimization',
+              <Sparkle key="icon2" />,
+              'Web Maintenance',
+              <Sparkle key="icon3" />
+            ]}
+            velocity={velocity}
+            className="custom-scroll-text text-xl font-semibold tracking-wide mx-6 [&_svg]:inline [&_svg]:align-middle [&_svg]:translate-y-[2px]"
+          />
         </div>
       </section>
 
@@ -241,31 +251,45 @@ const HomePage = () => {
       {/* Services Section */}
       <section>
         <WorkProcess />
-            {/* Services Strip */}
-            <section className="bg-blue-600 text-white py-6">
-              <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 text-center text-lg font-medium">
-                <span>Website Development</span>
-                <span className="hidden md:block">✳️</span>
-                <span>UX/UI Design</span>
-                <span className="hidden md:block">✳️</span>
-                <span>Graphics Design</span>
-              </div>
-            </section>
+          {/* Services Strip */}
+          <section className="bg-blue-600 text-white py-6">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-center font-base">
+              <ScrollVelocity
+                texts={[
+                  'Website Development',
+                  <Sparkle key="icon1" />,
+                  'Search Engine Optimization',
+                  <Sparkle key="icon2" />,
+                  'Web Maintenance',
+                  <Sparkle key="icon3" />
+                ]}
+                velocity={velocity}
+                className="custom-scroll-text text-xl font-semibold tracking-wide mx-6 [&_svg]:inline [&_svg]:align-middle [&_svg]:translate-y-[2px]"
+              />
+            </div>
+          </section>
       </section>
 
       {/* Why Section */}
       <section id='about'>
         <WhyChooseUs />
-            {/* Services Strip */}
-              <section className="bg-blue-600 text-white py-6">
-                <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 text-center text-lg font-medium">
-                  <span>Website Development</span>
-                  <span className="hidden md:block">✳️</span>
-                  <span>UX/UI Design</span>
-                  <span className="hidden md:block">✳️</span>
-                  <span>Graphics Design</span>
-                </div>
-              </section>
+          {/* Services Strip */}
+          <section className="bg-blue-600 text-white py-6">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-center font-base">
+              <ScrollVelocity
+                texts={[
+                  'Website Development',
+                  <Sparkle key="icon1" />,
+                  'Search Engine Optimization',
+                  <Sparkle key="icon2" />,
+                  'Web Maintenance',
+                  <Sparkle key="icon3" />
+                ]}
+                velocity={velocity}
+                className="custom-scroll-text text-xl font-semibold tracking-wide mx-6 [&_svg]:inline [&_svg]:align-middle [&_svg]:translate-y-[2px]"
+              />
+            </div>
+          </section>
       </section>
 
       {/* Projects Section */}
@@ -276,31 +300,45 @@ const HomePage = () => {
       {/* Projects Section */}
       <section id='contact'>
         <ContactSection />
-            {/* Services Strip */}
-              <section className="bg-blue-600 text-white py-6">
-                <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 text-center text-lg font-medium">
-                  <span>Website Development</span>
-                  <span className="hidden md:block">✳️</span>
-                  <span>UX/UI Design</span>
-                  <span className="hidden md:block">✳️</span>
-                  <span>Graphics Design</span>
-                </div>
-              </section>
+          {/* Services Strip */}
+          <section className="bg-blue-600 text-white py-6">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-center font-base">
+              <ScrollVelocity
+                texts={[
+                  'Website Development',
+                  <Sparkle key="icon1" />,
+                  'Search Engine Optimization',
+                  <Sparkle key="icon2" />,
+                  'Web Maintenance',
+                  <Sparkle key="icon3" />
+                ]}
+                velocity={velocity}
+                className="custom-scroll-text text-xl font-semibold tracking-wide mx-6 [&_svg]:inline [&_svg]:align-middle [&_svg]:translate-y-[2px]"
+              />
+            </div>
+          </section>
       </section>
 
       {/* Testimonials Section */}
       <section>
         <Testimonials />
-            {/* Services Strip */}
-              <section className="bg-blue-600 text-white py-6">
-                <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 text-center text-lg font-medium">
-                  <span>Website Development</span>
-                  <span className="hidden md:block">✳️</span>
-                  <span>UX/UI Design</span>
-                  <span className="hidden md:block">✳️</span>
-                  <span>Graphics Design</span>
-                </div>
-              </section>
+          {/* Services Strip */}
+          <section className="bg-blue-600 text-white py-6">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-center font-base">
+              <ScrollVelocity
+                texts={[
+                  'Website Development',
+                  <Sparkle key="icon1" />,
+                  'Search Engine Optimization',
+                  <Sparkle key="icon2" />,
+                  'Web Maintenance',
+                  <Sparkle key="icon3" />
+                ]}
+                velocity={velocity}
+                className="custom-scroll-text text-xl font-semibold tracking-wide mx-6 [&_svg]:inline [&_svg]:align-middle [&_svg]:translate-y-[2px]"
+              />
+            </div>
+          </section>
       </section>
 
       {/* Footer Section */}
