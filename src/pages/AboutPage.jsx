@@ -1,58 +1,85 @@
 import React from "react";
+import { IoSparklesSharp } from "react-icons/io5"; 
 
 const AboutSection = () => {
     return (
     <section id="about" className="bg-white text-gray-900 py-20 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Left Side - Image Grid */}
-        <div className="grid grid-cols-2 gap-4 md:w-1/2">
-        <div className="rounded-2xl overflow-hidden bg-blue-100 p-2">
-            <img
-            src="https://via.placeholder.com/300x300"
-            alt="Team working together"
-            className="w-full h-full object-cover rounded-xl"
-            />
-        </div>
-        <div className="rounded-2xl overflow-hidden bg-blue-50 p-2">
-            <img
-            src="https://via.placeholder.com/300x300"
-            alt="Business leader"
-            className="w-full h-full object-cover rounded-xl"
-            />
-        </div>
-        <div className="rounded-2xl overflow-hidden bg-blue-50 p-2">
-            <img
-            src="https://via.placeholder.com/300x300"
-            alt="Office meeting"
-            className="w-full h-full object-cover rounded-xl"
-            />
-        </div>
-        <div className="rounded-2xl overflow-hidden bg-blue-100 p-2">
-            <img
-            src="https://via.placeholder.com/300x300"
-            alt="Work environment"
-            className="w-full h-full object-cover rounded-xl"
-            />
-        </div>
-        </div>
+<div className="relative md:w-1/2 space-y-4">
+
+
+  {/* One Large Sparkle */}
+  <IoSparklesSharp className="absolute -bottom-10 -left-10 text-blue-700 text-8xl opacity-90" />
+
+  {/* TOP ROW */}
+  <div className="flex gap-4">
+    {/* Top Left — wider */}
+    <div className="flex-[1.6] overflow-hidden">
+      <img
+        src="/images/team-work.jpeg"
+        alt="Team working together"
+        className="w-full h-[260px] object-cover rounded-sm rounded-tl-[110px]"
+      />
+    </div>
+
+    {/* Top Right — narrower */}
+    <div className="flex-[1] overflow-hidden">
+      <img
+        src="/images/leadership.jpeg"
+        alt="Business leader"
+        className="w-full h-[260px] object-cover rounded-sm rounded-tr-[120px]"
+      />
+    </div>
+  </div>
+
+  {/* BOTTOM ROW */}
+  <div className="flex gap-4">
+    {/* Bottom Left — narrower */}
+    <div className="flex-[1.2] overflow-hidden rounded-sm rounded-bl-[100px]">
+      <img
+        src="/images/meeting.jpeg"
+        alt="Office meeting"
+        className="w-full h-[220px] object-cover"
+      />
+    </div>
+
+    {/* Bottom Right — wider */}
+    <div className="flex-[1.4] overflow-hidden">
+      <img
+        src="/images/office.jpeg"
+        alt="Work environment"
+        className="w-full h-[220px] object-cover rounded-sm rounded-br-[90px]"
+      />
+    </div>
+  </div>
+
+</div>
+
+
+
+
 
         {/* Right Side - Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
-        <p className="text-white-500 font-semibold mb-2"><span className="text-blue-500 mr-1">//</span> About Us</p>
+        <p className="text-gray-600 font-semibold mb-2"><span className="text-blue-500 mr-1">//</span> About Us</p>
         <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
-            Transforming <span className="text-blue-600">Ideas</span> into Digital Reality
+        Transforming <span className="text-blue-600">Ideas</span><br />
+        <span className="text-blue-600">into Digital Reality</span>
         </h2>
-        <p className="text-gray-600 mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+        <p className="text-gray-600 font-semibold mb-8">
+            We combine creativity, strategy, and technology to craft digital experiences that stand out. 
+            Whether you’re elevating your brand or launching something new, 
+            we’re here to help bring your vision to life with clarity and purpose.
         </p>
 
         {/* Stats */}
         <div className="flex flex-col sm:flex-row sm:justify-start sm:items-center gap-8 mb-10">
             <div>
-            <h3 className="text-2xl font-bold text-blue-600">150+</h3>
-            <p className="text-gray-500 text-sm">Team Members</p>
+            <h3 className="text-2xl font-bold text-blue-600">5+</h3>
+            <p className="text-gray-500 text-sm">Years of Experience</p>
             </div>
             <div>
-            <h3 className="text-2xl font-bold text-blue-600">2000+</h3>
+            <h3 className="text-2xl font-bold text-blue-600">50+</h3>
             <p className="text-gray-500 text-sm">Happy Clients</p>
             </div>
             <div>
@@ -62,10 +89,12 @@ const AboutSection = () => {
         </div>
 
         {/* Signature */}
-        <div>
-            <p className="text-lg font-medium italic">Jenny Alexander</p>
-            <p className="text-gray-500 text-sm">Jenny Alexander - CEO</p>
-        </div>
+            <div>
+            <p className="allura-regular text-[24px] leading-tight italic signature-underline">
+                Langavi Makhubele
+            </p>
+            <p className="text-gray-500 text-sm">Langavi — CEO</p>
+            </div>
         </div>
     </section>
     );

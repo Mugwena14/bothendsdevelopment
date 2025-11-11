@@ -3,8 +3,22 @@
 @plugin "tailwindcss-animate";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 @import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Miniver&display=swap');
 
 @custom-variant dark (&:is(.dark *));
+
+.miniver-regular {
+    font-family: "Miniver", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.allura-regular {
+    font-family: "Allura", cursive;
+    font-weight: 400;
+    font-style: italic;
+}
+
 
 body {
     font-family: "Open Sans", sans-serif;
