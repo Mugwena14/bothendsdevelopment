@@ -23,14 +23,14 @@ export default function Footer() {
             <div>
             <div className="flex items-center gap-2 mb-4">
                 <div className="w-9 h-9 rounded-full bg-blue-600 flex items-center justify-center">
-                <span className="text-lg font-bold">I</span>
+                <span className="text-lg font-bold">B</span>
                 </div>
-                <p className="text-lg font-semibold">IT Company.</p>
+                <p className="text-lg font-semibold">EndsDevelopment.</p>
             </div>
 
             <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
+                At BothEndsDevelopment, we believe every idea deserves great execution. Our team designs and develops tools 
+                that empower brands to grow, connect, and inspire.
             </p>
 
             <div className="flex gap-3 text-gray-300">
@@ -56,10 +56,10 @@ export default function Footer() {
             {/* Contact */}
             <div>
             <h3 className="text-sm font-semibold mb-4">Contact</h3>
-            <p className="text-gray-300 text-sm mb-2">(000) 000-0000</p>
-            <p className="text-gray-300 text-sm mb-2">example@gmail.com</p>
+            <p className="text-gray-300 text-sm mb-2">(+27) 68-502-1117</p>
+            <p className="text-gray-300 text-sm mb-2">mlangaviclyde@gmail.com</p>
             <p className="text-gray-300 text-sm">
-                2464 Royal Ln. Mesa, <br /> New Jersey 45463
+                South Africa, <br /> Gauteng
             </p>
             </div>
 
@@ -82,7 +82,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-8 border-t border-white/10 py-5 text-center text-sm flex flex-col md:flex-row justify-between px-6 max-w-6xl mx-auto text-gray-400">
-        <p>Copyright © 2025 IT Company. All Rights Reserved.</p>
+        <p>Copyright © 2025 BothEndsDevelopment. All Rights Reserved.</p>
         <div className="flex gap-6 justify-center mt-3 md:mt-0">
             <p className="hover:text-blue-400 cursor-pointer">User Terms & Conditions</p>
             <p className="hover:text-blue-400 cursor-pointer">Privacy Policy</p>

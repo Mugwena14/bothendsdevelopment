@@ -35,25 +35,25 @@ const HomePage = () => {
         {/* Left Contact Info */}
         <div className="flex gap-6">
           <span className="flex items-center gap-2">
-            <Phone size={16} className="text-blue-400 font-semibold" /> +27 84 234 7310
+            <Phone size={16} className="text-indigo-400 font-semibold" /> +27 84 234 7310
           </span>
           <span className="flex items-center gap-2">
-            <Mail size={16} className="text-blue-400 font-semibold" /> mlangaviclyde@gmail.com
+            <Mail size={16} className="text-indigo-400 font-semibold" /> mlangaviclyde@gmail.com
           </span>
         </div>
 
         {/* Social Icons */}
         <div className="flex gap-4 bg-[#0b1a3a] px-4 py-2 rounded-full">
-          <a href="#" className="hover:text-blue-400 transition">
+          <a href="#" className="hover:text-indigo-400 transition">
             <Facebook size={18} />
           </a>
-          <a href="#" className="hover:text-blue-400 transition">
+          <a href="#" className="hover:text-indigo-400 transition">
             <Twitter size={18} />
           </a>
-          <a href="#" className="hover:text-blue-400 transition">
+          <a href="#" className="hover:text-indigo-400 transition">
             <Linkedin size={18} />
           </a>
-          <a href="#" className="hover:text-blue-400 transition">
+          <a href="#" className="hover:text-indigo-400 transition">
             <Instagram size={18} />
           </a>
         </div>
@@ -62,8 +62,8 @@ const HomePage = () => {
 
       {/* Navbar */}
       <nav className="relative flex justify-between items-center px-8 py-4 bg-white border-b border-gray-200 shadow-sm">
-        <div className="text-2xl font-semibold text-gray-900">
-          Both<span className="text-blue-500">Ends</span>Development
+        <div className="text-2xl font-semibold text-[#0f172a]">
+          Both<span className="text-indigo-600">Ends</span>Development
         </div>
 
         {/* Desktop Links */}
@@ -76,7 +76,7 @@ const HomePage = () => {
                   smooth={true}
                   duration={500}
                   offset={-80}
-                  className="cursor-pointer hover:text-blue-500 transition"
+                  className="cursor-pointer hover:text-indigo-500 transition"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.name}
@@ -85,8 +85,8 @@ const HomePage = () => {
                 <NavLink
                   to={link.path}
                   className={({ isActive }) =>
-                    `hover:text-blue-500 transition ${
-                      isActive ? "text-blue-600 font-semibold" : ""
+                    `hover:text-indigo-500 transition ${
+                      isActive ? "text-indigo-600 font-semibold" : ""
                     }`
                   }
                 >
@@ -98,7 +98,7 @@ const HomePage = () => {
         </ul>
 
         {/* Quote Button */}
-        <button className="hidden text-sm font-semibold md:block bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full text-white font-medium">
+        <button className="hidden text-sm font-semibold md:block bg-indigo-600 hover:bg-indigo-700 px-5 py-2 rounded-full text-white font-medium">
           Get A Quote
         </button>
 
@@ -142,7 +142,7 @@ const HomePage = () => {
                       smooth={true}
                       duration={500}
                       offset={-80}
-                      className="block py-2 cursor-pointer hover:text-blue-500 transition"
+                      className="block py-2 cursor-pointer hover:text-indigo-500 transition"
                       onClick={() => setMenuOpen(false)}
                     >
                       {link.name}
@@ -152,8 +152,8 @@ const HomePage = () => {
                       to={link.path}
                       onClick={() => setMenuOpen(false)}
                       className={({ isActive }) =>
-                        `block py-2 hover:text-blue-500 transition ${
-                          isActive ? "text-blue-600 font-semibold" : ""
+                        `block py-2 hover:text-indigo-500 transition ${
+                          isActive ? "text-indigo-600 font-semibold" : ""
                         }`
                       }
                     >
@@ -163,7 +163,7 @@ const HomePage = () => {
                 </li>
               ))}
               <li>
-                <button className="mt-2 bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-full text-white font-medium">
+                <button className="mt-2 bg-indigo-600 hover:bg-indigo-700 px-6 py-2 rounded-full text-white font-medium">
                   Get A Quote
                 </button>
               </li>
@@ -195,7 +195,7 @@ const HomePage = () => {
 
         <div className="relative max-w-xl z-10 text-white">
           <p className="font-semibold mb-3">
-            <span className="mr-1 text-blue-400">//</span> Experience The Best IT Solutions
+            <span className="mr-1 text-indigo-400">//</span> Experience The Best IT Solutions
           </p>
 
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
@@ -208,10 +208,10 @@ const HomePage = () => {
           </p>
 
           <div className="flex gap-4">
-            <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-medium">
+            <button className="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-full font-medium">
               Explore More
             </button>
-            <button className="border border-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-full font-medium">
+            <button className="border border-indigo-600 hover:bg-indigo-600 hover:text-white px-6 py-3 rounded-full font-medium">
               View All Services
             </button>
           </div>
@@ -221,7 +221,7 @@ const HomePage = () => {
 
 
       {/* Services Strip */}
-      <section className="bg-blue-600 text-white py-6">
+      <section className="bg-indigo-600 text-white py-6">
         <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-center font-base">
           <ScrollVelocity
             texts={[
@@ -252,29 +252,7 @@ const HomePage = () => {
       <section>
         <WorkProcess />
           {/* Services Strip */}
-          <section className="bg-blue-600 text-white py-6">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-center font-base">
-              <ScrollVelocity
-                texts={[
-                  'Website Development',
-                  <Sparkle key="icon1" />,
-                  'Search Engine Optimization',
-                  <Sparkle key="icon2" />,
-                  'Web Maintenance',
-                  <Sparkle key="icon3" />
-                ]}
-                velocity={velocity}
-                className="custom-scroll-text text-xl font-semibold tracking-wide mx-6 [&_svg]:inline [&_svg]:align-middle [&_svg]:translate-y-[2px]"
-              />
-            </div>
-          </section>
-      </section>
-
-      {/* Why Section */}
-      <section id='about'>
-        <WhyChooseUs />
-          {/* Services Strip */}
-          <section className="bg-blue-600 text-white py-6">
+          <section className="bg-indigo-600 text-white py-6">
             <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-center font-base">
               <ScrollVelocity
                 texts={[
@@ -301,7 +279,7 @@ const HomePage = () => {
       <section id='contact'>
         <ContactSection />
           {/* Services Strip */}
-          <section className="bg-blue-600 text-white py-6">
+          <section className="bg-indigo-600 text-white py-6">
             <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-center font-base">
               <ScrollVelocity
                 texts={[
@@ -323,7 +301,7 @@ const HomePage = () => {
       <section>
         <Testimonials />
           {/* Services Strip */}
-          <section className="bg-blue-600 text-white py-6">
+          <section className="bg-indigo-600 text-white py-6">
             <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-center font-base">
               <ScrollVelocity
                 texts={[

@@ -1,77 +1,66 @@
-import { TbBulb } from "react-icons/tb";
-import { Layers, Smile, NotepadText } from "lucide-react";
+import { ClipboardList, Lightbulb, Layers, Smile } from "lucide-react";
 
 export default function WorkProcess() {
   const steps = [
     {
       id: "01",
       title: "Consultation",
-      description: "We take the time to understand your goals and challenges.",
-      icon: <NotepadText size={22} />,
+      text: "We take the time to understand your goals and challenges.",
+      icon: <ClipboardList size={24} />,
     },
     {
       id: "02",
       title: "Strategy",
-      description: "We define a clear, tailored roadmap for your project.",
-      icon: <TbBulb size={22} />,
+      text: "Crafting a clear roadmap tailored to your business needs.",
+      icon: <Lightbulb size={24} />,
     },
     {
       id: "03",
       title: "Implementation",
-      description: "We develop, refine, and execute with precision.",
-      icon: <Layers size={22} />,
+      text: "Turning strategy into seamless digital experiences.",
+      icon: <Layers size={24} />,
     },
     {
       id: "04",
       title: "Final Result",
-      description: "We deliver a polished, high-quality final product.",
-      icon: <Smile size={22} />,
+      text: "Delivering impactful outcomes that drive success.",
+      icon: <Smile size={24} />,
     },
   ];
 
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto text-center px-6">
-        <p className="text-gray-500 font-medium mb-1">
-          <span className="text-blue-500 mr-1">//</span> Our Work Process
-        </p>
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-          Our Proven <span className="text-blue-600">Work Process</span>
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        {/* Section header */}
+        <p className="text-[17px] font-semibold text-gray-800"> <span className="mr-1 text-indigo-600">//</span> Our Work Process</p>
+        <h2 className="text-3xl font-semibold mt-2 text-[#0f172a]">
+          Our Proven <span className="text-indigo-600">Work Process</span>
         </h2>
 
-        {/* Steps */}
-        <div className="mt-16 flex flex-col md:flex-row items-center justify-between relative">
-
+        {/* Process Steps */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
           {steps.map((step) => (
-            <div key={step.id} className="flex flex-col items-center text-center w-full md:w-auto">
-
-              {/* ICON + STEP NUMBER */}
-              <div className="relative flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full text-blue-600 text-3xl">
+            <div key={step.id} className="relative flex flex-col items-center text-center">
+              {/* Icon bubble */}
+              <div className="relative flex items-center justify-center w-14 h-14 rounded-full bg-indigo-600 text-white mb-6">
                 {step.icon}
-                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-3 w-8 h-8 bg-blue-600 text-white text-xs flex items-center justify-center font-semibold rounded-full">
+                <span className="absolute -top-2 -right-2 bg-[#0f162a] text-indigo-400 text-[14px] font-semibold rounded-full w-6 h-6 flex items-center justify-center">
                   {step.id}
                 </span>
               </div>
 
-              {/* TITLE */}
-              <h4 className="font-semibold text-gray-900 mt-6 text-lg">
-                {step.title}
-              </h4>
-
-              {/* DESCRIPTION */}
-              <p className="text-gray-500 text-sm mt-2 max-w-[180px]">
-                {step.description}
+              {/* Title & Description */}
+              <h4 className="text-lg font-semibold text-gray-900">{step.title}</h4>
+              <p className="text-gray-500 text-sm mt-2 max-w-[200px]">
+                {step.text}
               </p>
+
+              {/* Connector line */}
+              {step.id !== "04" && (
+                <div className="hidden lg:block absolute top-7 right-[-3rem] w-12 h-[2px] bg-indigo-700"></div>
+              )}
             </div>
           ))}
-
-          {/* CONNECTING LINES (Blue Gradient) */}
-          <div className="hidden md:flex absolute inset-0 -z-10 px-14">
-            <div className="flex items-center justify-around w-full">
-              <div className="h-[3px] bg-gradient-to-r from-transparent via-blue-500 to-transparent w-full"></div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>

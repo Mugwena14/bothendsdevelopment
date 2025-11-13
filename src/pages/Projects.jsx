@@ -19,12 +19,12 @@ export default function Projects() {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-[#071B3A]">
       <div className="max-w-6xl mx-auto px-4 text-center">
-        <p className="text-sm text-gray-500">// Our Latest Projects</p>
-        <h2 className="text-3xl font-semibold mt-2 text-gray-900">
+        <p className="text-sm font-semibold text-white"> <span className="mr-1 text-indigo-600">//</span> Our Latest Projects</p>
+        <h2 className="text-3xl font-semibold mt-2 text-indigo-600">
           Explore Our Showcase of <br />
-          <span className="text-blue-600">Featured Works</span>
+          <span className="text-indigo-600">Featured Works</span>
         </h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8 mt-12">
@@ -56,7 +56,7 @@ export default function Projects() {
           ))}
         </div>
 
-        <button className="mt-10 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition">
+        <button className="mt-10 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-full transition">
           View All Works
         </button>
       </div>

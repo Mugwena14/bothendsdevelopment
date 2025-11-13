@@ -1,121 +1,140 @@
-import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import {
+    MapPin,
+    Phone,
+    Mail,
+    Clock,
+    Facebook,
+    Twitter,
+    Instagram,
+    Linkedin,
+} from "lucide-react";
 
 export default function ContactSection() {
     return (
-    <section className="py-16 bg-white">
+    <section className="py-20 bg-[#020B25] text-white">
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12">
-
         {/* Left Contact Info Card */}
-        <div className="bg-[#061C45] text-white p-8 rounded-2xl space-y-8">
-
+        <div className="bg-[#041033]/90 backdrop-blur-md p-10 rounded-3xl flex flex-col justify-between shadow-lg border border-white/5">
+            <div className="space-y-10">
             <div>
-            <h4 className="text-lg font-semibold flex items-center gap-2">
-                <MapPin size={18} /> Address
-            </h4>
-            <p className="text-sm mt-2">2464 Royal Ln. Mesa,<br />New Jersey 45463</p>
+                <h4 className="text-xl font-semibold mb-2 flex items-center gap-3">
+                <MapPin size={22} className="text-blue-400" /> Location
+                </h4>
+                <p className="text-base text-gray-300 leading-relaxed">
+                South Africa <br /> Gauteng
+                </p>
             </div>
 
             <div>
-            <h4 className="text-lg font-semibold flex items-center gap-2">
-                <Phone size={18} /> Contact
-            </h4>
-            <p className="text-sm mt-2">Phone : (+000) 000-0000</p>
-            <p className="text-sm flex items-center gap-2">
-                <Mail size={16} /> example@gmail.com
-            </p>
+                <h4 className="text-xl font-semibold mb-2 flex items-center gap-3">
+                <Phone size={22} className="text-blue-400" /> Contact
+                </h4>
+                <p className="text-base text-gray-300">
+                Phone: <span className="text-white">+27 68 502 1117</span>
+                </p>
+                <p className="text-base flex items-center gap-2 mt-1 text-gray-300">
+                <Mail size={20} className="text-blue-400" />{" "}
+                mlangaviclyde@gmail.com
+                </p>
             </div>
 
             <div>
-            <h4 className="text-lg font-semibold flex items-center gap-2">
-                <Clock size={18} /> Open Time
-            </h4>
-            <p className="text-sm mt-2">Monday - Friday : 10:00 - 20:00</p>
+                <h4 className="text-xl font-semibold mb-2 flex items-center gap-3">
+                <Clock size={22} className="text-blue-400" /> Availability
+                </h4>
+                <p className="text-base text-gray-300">Mon–Sun 24/7</p>
+            </div>
             </div>
 
-            <div>
-            <h4 className="text-lg font-semibold">Stay Connected</h4>
-            <div className="flex space-x-3 mt-3">
+            {/* Social Icons */}
+            <div className="mt-12">
+            <h4 className="text-xl font-semibold mb-4">Stay Connected</h4>
+            <div className="flex space-x-4">
                 {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
                 <button
                     key={index}
-                    className="bg-white/20 hover:bg-white/30 transition w-10 h-10 rounded-full flex items-center justify-center"
+                    className="bg-blue-600/20 hover:bg-blue-600/40 text-white w-12 h-12 rounded-full flex items-center justify-center transition"
                 >
-                    <Icon size={18} />
+                    <Icon size={22} />
                 </button>
                 ))}
             </div>
             </div>
-
         </div>
 
         {/* Right Contact Form */}
         <div>
-            <p className="text-sm text-gray-500">// Contact Us</p>
-            <h2 className="text-3xl font-semibold mt-1 text-black">
-            Get Your <span className="text-blue-600">Free Quote</span> Today!
+            <p className="text-sm text-gray-400"> <span className="mr-1 text-indigo-500">//</span> Contact Us</p>
+            <h2 className="text-4xl font-semibold mt-1">
+            Get Your <span className="text-blue-500">Free Quote</span> Today!
             </h2>
 
-            <form className="mt-8 space-y-6">
-
-                {/* Name + Email */}
-                <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-                    <input
-                        className="w-full border border-gray-300 bg-gray-50 text-black placeholder-black px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                        placeholder="Ex. John Doe"
-                    />
-                    </div>
-
-                    <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                    <input
-                        className="w-full border border-gray-300 bg-gray-50 text-black placeholder-black px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                        placeholder="example@gmail.com"
-                    />
-                    </div>
-                </div>
-
-                {/* Phone + Services */}
-                <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-                    <input
-                        className="w-full border border-gray-300 bg-gray-50 text-black placeholder-black px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                        placeholder="Enter Phone Number"
-                    />
-                    </div>
-
-                    <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Service</label>
-                    <select
-                        className="w-full border border-gray-300 bg-gray-50 text-black px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    >
-                        <option value="" disabled selected>Select Services</option>
-                        <option>Web Development</option>
-                        <option>UI/UX Design</option>
-                        <option>App Development</option>
-                        <option>Branding / Graphics</option>
-                    </select>
-                    </div>
-                </div>
-
-                {/* Message */}
+            <form className="mt-10 space-y-6">
+            {/* Name + Email */}
+            <div className="grid sm:grid-cols-2 gap-5">
                 <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
-                    <textarea
-                    className="w-full border border-gray-300 bg-gray-50 text-black placeholder-black px-4 py-3 rounded-lg h-32 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    placeholder="Enter here..."
-                    ></textarea>
+                <label className="block text-sm text-gray-300 mb-2">
+                    Your Name
+                </label>
+                <input
+                    className="w-full bg-[#091740]/60 border border-white/10 text-white placeholder-gray-400 px-4 py-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                    placeholder="Ex. John Doe"
+                />
                 </div>
 
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition">
-                    Send Message
-                </button>
+                <div>
+                <label className="block text-sm text-gray-300 mb-2">Email</label>
+                <input
+                    className="w-full bg-[#091740]/60 border border-white/10 text-white placeholder-gray-400 px-4 py-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                    placeholder="example@gmail.com"
+                />
+                </div>
+            </div>
 
+            {/* Phone + Service */}
+            <div className="grid sm:grid-cols-2 gap-5">
+                <div>
+                <label className="block text-sm text-gray-300 mb-2">Phone</label>
+                <input
+                    className="w-full bg-[#091740]/60 border border-white/10 text-white placeholder-gray-400 px-4 py-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                    placeholder="Enter Phone Number"
+                />
+                </div>
+
+                <div>
+                <label className="block text-sm text-gray-300 mb-2">
+                    Service
+                </label>
+                <select
+                    className="w-full bg-[#091740]/60 border border-white/10 text-white px-4 py-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                    defaultValue=""
+                >
+                    <option value="" disabled>
+                    Select Services
+                    </option>
+                    <option>Web Development</option>
+                    <option>Web Maintenance</option>
+                    <option>SEO Optimization</option>
+                </select>
+                </div>
+            </div>
+
+            {/* Message */}
+            <div>
+                <label className="block text-sm text-gray-300 mb-2">
+                Your Message
+                </label>
+                <textarea
+                className="w-full bg-[#091740]/60 border border-white/10 text-white placeholder-gray-400 px-4 py-3.5 rounded-lg h-32 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                placeholder="Enter here..."
+                ></textarea>
+            </div>
+
+            <button className="bg-gradient-to-r from-blue-600 to-blue-400 hover:opacity-90 text-white px-8 py-3.5 rounded-xl font-medium transition-all shadow-md hover:shadow-blue-500/30">
+                Send Message
+            </button>
             </form>
         </div>
-
         </div>
     </section>
     );

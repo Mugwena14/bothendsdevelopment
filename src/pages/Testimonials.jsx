@@ -6,7 +6,7 @@ export default function Testimonials() {
         <div className="max-w-6xl mx-auto px-6 text-center">
 
         {/* Section Label */}
-        <p className="text-sm text-gray-300 tracking-wide mb-2">// Testimonials</p>
+        <p className="text-[17px] font-md text-gray-300 tracking-wide mb-2"> <span className="mr-1 text-indigo-600">//</span>Testimonials</p>
 
         {/* Title */}
         <h2 className="text-3xl sm:text-4xl font-semibold mb-14">
@@ -23,7 +23,7 @@ export default function Testimonials() {
                 <span className="text-white ml-2 text-sm font-medium">5.0</span>
             </div>
 
-            <h3 className="text-xl font-semibold mb-3">A Wonderful Experience!</h3>
+            <h3 className="text-xl text-left font-semibold mb-3">A Wonderful Experience!</h3>
             <p className="text-gray-300 text-sm leading-relaxed mb-6">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                 laudantium, totam rem aperiam.
@@ -48,7 +48,7 @@ export default function Testimonials() {
                 <span className="text-white ml-2 text-sm font-medium">5.0</span>
             </div>
 
-            <h3 className="text-xl font-semibold mb-3">Highly Recommended!</h3>
+            <h3 className="text-xl text-left font-semibold mb-3">Highly Recommended!</h3>
             <p className="text-gray-300 text-sm leading-relaxed mb-6">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                 laudantium, totam rem aperiam.
@@ -60,8 +60,8 @@ export default function Testimonials() {
                 className="w-12 h-12 rounded-full object-cover"
                 />
                 <div className="text-left">
-                <p className="font-medium text-white">Bessie Cooper</p>
-                <p className="text-sm text-gray-400">CEO, Car Rental App</p>
+                <p className="font-medium text-white">Drip Coat</p>
+                <p className="text-sm text-gray-400">Car Wrap Booking App</p>
                 </div>
             </div>
             </div>

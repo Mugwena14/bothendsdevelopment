@@ -31,15 +31,15 @@ const ServicesSection = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
             <p className="text-gray-500 font-semibold">
-              <span className="text-blue-500 mr-1">//</span> Our Services
+              <span className="text-indigo-500 mr-1">//</span> Our Services
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
-              <span> Services We Provide to{" "} </span><br />
-              <span className="text-blue-600">Elevate Your Business</span>
+              <span className="text-[#0f172a]"> Services We Provide to{" "} </span><br />
+              <span className="text-indigo-600">Elevate Your Business</span>
             </h2>
           </div>
 
-          <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold mt-10 px-6 py-3 rounded-full transition">
+          <button className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold mt-10 px-6 py-3 rounded-full transition">
             View All Services
           </button>
         </div>
@@ -51,11 +51,11 @@ const ServicesSection = () => {
               key={index}
               className="bg-white shadow-md rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition"
             >
-              <div className="flex items-center justify-center w-16 h-16 bg-blue-400 text-white rounded-xl mb-6">
+              <div className="flex items-center justify-center w-16 h-16 bg-indigo-600 text-white rounded-xl mb-6">
                 {service.icon}
               </div>
 
-              <h3 className="text-lg font-semibold mb-3 text-gray-900">
+              <h3 className="text-lg font-semibold mb-3 text-[#0f172a]">
                 {service.title}
               </h3>
 
@@ -63,7 +63,7 @@ const ServicesSection = () => {
                 {service.description}
               </p>
 
-              <button className="flex items-center gap-2 text-blue-600 font-medium hover:gap-3 transition-all">
+              <button className="flex items-center gap-2 text-indigo-600 font-medium hover:gap-3 transition-all">
                 Learn more <ArrowRight size={16} />
               </button>
             </div>

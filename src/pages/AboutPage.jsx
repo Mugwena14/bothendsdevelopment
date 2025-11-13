@@ -9,7 +9,7 @@ const AboutSection = () => {
 
 
         {/* One Large Sparkle */}
-        <IoSparklesSharp className="absolute -bottom-10 -left-10 text-blue-700 text-8xl opacity-90" />
+        <IoSparklesSharp className="absolute -bottom-10 -left-10 text-indigo-700 text-8xl opacity-90" />
 
         {/* TOP ROW */}
         <div className="flex gap-4">
@@ -18,7 +18,7 @@ const AboutSection = () => {
             <img
                 src="/images/team-work.jpeg"
                 alt="Team working together"
-                className="w-full h-[260px] object-cover rounded-sm rounded-tl-[110px]"
+                className="w-full h-[220px] object-cover rounded-sm rounded-tl-[110px]"
             />
             </div>
 
@@ -27,7 +27,7 @@ const AboutSection = () => {
             <img
                 src="/images/leadership.jpeg"
                 alt="Business leader"
-                className="w-full h-[260px] object-cover rounded-sm rounded-tr-[120px]"
+                className="w-full h-[220px] object-cover rounded-sm rounded-tr-[120px]"
             />
             </div>
         </div>
@@ -39,7 +39,7 @@ const AboutSection = () => {
             <img
                 src="/images/meeting.jpeg"
                 alt="Office meeting"
-                className="w-full h-[220px] object-cover"
+                className="w-full h-[180px] object-cover"
             />
             </div>
 
@@ -48,7 +48,7 @@ const AboutSection = () => {
             <img
                 src="/images/office.jpeg"
                 alt="Work environment"
-                className="w-full h-[220px] object-cover rounded-sm rounded-br-[90px]"
+                className="w-full h-[180px] object-cover rounded-sm rounded-br-[90px]"
             />
             </div>
         </div>
@@ -58,10 +58,10 @@ const AboutSection = () => {
 
         {/* Right Side - Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
-        <p className="text-gray-600 font-semibold mb-2"><span className="text-blue-500 mr-1">//</span> About Us</p>
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
-        Transforming <span className="text-blue-600">Ideas</span><br />
-        <span className="text-blue-600">into Digital Reality</span>
+        <p className="text-gray-600 font-semibold mb-2"><span className="text-indigo-500 mr-1">//</span> About Us</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#0f172a] mb-4 leading-tight">
+        Transforming <span className="text-indigo-600">Ideas</span><br />
+        <span className="text-indigo-600">into Digital Reality</span>
         </h2>
         <p className="text-gray-600 font-semibold mb-8">
             We combine creativity, strategy, and technology to craft digital experiences that stand out. 
@@ -72,15 +72,15 @@ const AboutSection = () => {
         {/* Stats */}
         <div className="flex flex-col sm:flex-row sm:justify-start sm:items-center gap-8 mb-10">
             <div>
-            <h3 className="text-2xl font-bold text-blue-600">5+</h3>
+            <h3 className="text-2xl font-bold text-indigo-600">5+</h3>
             <p className="text-gray-500 text-sm">Years of Experience</p>
             </div>
             <div>
-            <h3 className="text-2xl font-bold text-blue-600">50+</h3>
+            <h3 className="text-2xl font-bold text-indigo-600">50+</h3>
             <p className="text-gray-500 text-sm">Happy Clients</p>
             </div>
             <div>
-            <h3 className="text-2xl font-bold text-blue-600">99%</h3>
+            <h3 className="text-2xl font-bold text-indigo-600">99%</h3>
             <p className="text-gray-500 text-sm">Client Satisfaction</p>
             </div>
         </div>
