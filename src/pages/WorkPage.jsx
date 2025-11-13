@@ -32,15 +32,20 @@ export default function WorkProcess() {
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
         {/* Section header */}
-        <p className="text-[17px] font-semibold text-gray-800"> <span className="mr-1 text-indigo-600">//</span> Our Work Process</p>
+        <p className="text-[17px] font-semibold text-gray-800">
+          <span className="mr-1 text-indigo-600">//</span> Our Work Process
+        </p>
         <h2 className="text-3xl font-semibold mt-2 text-[#0f172a]">
           Our Proven <span className="text-indigo-600">Work Process</span>
         </h2>
 
         {/* Process Steps */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
-          {steps.map((step) => (
-            <div key={step.id} className="relative flex flex-col items-center text-center">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mt-16 relative">
+          {steps.map((step, index) => (
+            <div
+              key={step.id}
+              className="relative flex flex-col items-center text-center"
+            >
               {/* Icon bubble */}
               <div className="relative flex items-center justify-center w-14 h-14 rounded-full bg-indigo-600 text-white mb-6">
                 {step.icon}
@@ -50,14 +55,21 @@ export default function WorkProcess() {
               </div>
 
               {/* Title & Description */}
-              <h4 className="text-lg font-semibold text-gray-900">{step.title}</h4>
+              <h4 className="text-lg font-semibold text-gray-900">
+                {step.title}
+              </h4>
               <p className="text-gray-500 text-sm mt-2 max-w-[200px]">
                 {step.text}
               </p>
 
-              {/* Connector line */}
-              {step.id !== "04" && (
+              {/* Horizontal line (desktop) */}
+              {index !== steps.length - 1 && (
                 <div className="hidden lg:block absolute top-7 right-[-3rem] w-12 h-[2px] bg-indigo-700"></div>
+              )}
+
+              {/* Vertical line (mobile only) */}
+              {index !== steps.length - 1 && (
+                <div className="block lg:hidden absolute bottom-[-3rem] w-[2px] h-12 bg-indigo-700"></div>
               )}
             </div>
           ))}

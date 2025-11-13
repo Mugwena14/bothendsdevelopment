@@ -207,11 +207,11 @@ const HomePage = () => {
             solve real problems and move businesses forward.
           </p>
 
-          <div className="flex gap-4">
-            <button className="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-full font-medium">
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <button className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-full font-medium">
               Explore More
             </button>
-            <button className="border border-indigo-600 hover:bg-indigo-600 hover:text-white px-6 py-3 rounded-full font-medium">
+            <button className="w-full sm:w-auto border border-indigo-600 hover:bg-indigo-600 hover:text-white px-6 py-3 rounded-full font-medium">
               View All Services
             </button>
           </div>
