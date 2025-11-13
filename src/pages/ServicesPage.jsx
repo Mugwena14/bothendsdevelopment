@@ -1,5 +1,6 @@
 import React from "react";
-import { ArrowRight, LayoutTemplate, CalendarSearch, BugOff } from "lucide-react";
+import { ArrowRight, LayoutTemplate, Search, BugOff } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ServicesSection = () => {
   const services = [
@@ -13,7 +14,7 @@ const ServicesSection = () => {
       title: "SEO Optimization",
       description:
         "We help your business get discovered by the right audience. Through strategic SEO practices, we improve your rankings, boost visibility, and drive organic growth.",
-      icon: <CalendarSearch size={28} />, 
+      icon: <Search size={28} />, 
     },
     {
       title: "Web Maintenance",
@@ -39,9 +40,11 @@ const ServicesSection = () => {
             </h2>
           </div>
 
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold mt-10 px-6 py-3 rounded-full transition">
+          <Link 
+          to="/servicesProvider"
+          className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold mt-10 px-6 py-3 rounded-full transition">
             View All Services
-          </button>
+          </Link>
         </div>
 
         {/* Cards */}
@@ -63,9 +66,12 @@ const ServicesSection = () => {
                 {service.description}
               </p>
 
-              <button className="flex items-center gap-2 text-indigo-600 font-medium hover:gap-3 transition-all">
+              <Link
+                to="/servicesProvider"
+                className="flex items-center gap-2 text-indigo-600 font-medium hover:gap-3 transition-all"
+              >
                 Learn more <ArrowRight size={16} />
-              </button>
+              </Link>
             </div>
           ))}
         </div>

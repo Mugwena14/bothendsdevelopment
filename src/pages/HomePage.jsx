@@ -4,27 +4,30 @@ import { Link as ScrollLink } from "react-scroll";
 import AboutSection from "./AboutPage";
 import ServicesSection from "./ServicesPage";
 import WorkProcess from "./WorkPage";
-import WhyChooseUs from "./WhyChooseUs";
 import Projects from "./Projects";
 import ContactSection from "./ContactPage";
 import Testimonials from "./Testimonials";
 import Footer from "./Footer";
 import { Phone, Mail, Facebook, Twitter, Linkedin, Instagram, Sparkle } from "lucide-react";
 import ScrollVelocity from '../components/ScrollVelocity';
+import { FaWhatsapp } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
   
   const velocity = 80;
 
 
   const navLinks = [
     { name: "Home", path: "/", isScroll: true },
-    { name: "Services", path: "/services", isScroll: true  },
-    { name: "Projects", path: "/projects", isScroll: true  },
-    { name: "Blogs", path: "/blogs", isScroll: true  },
     { name: "About Us", path: "about", isScroll: true },
-    { name: "Pricing", path: "/pricing", isScroll: true  },
+    { name: "Services", path: "services", isScroll: true  },
+    { name: "Projects", path: "projects", isScroll: true  },
+    { name: "Contacts", path: "contacts", isScroll: true  },
+    { name: "Testimonils", path: "testimonials", isScroll: true  },
   ];
 
   return (
@@ -44,17 +47,21 @@ const HomePage = () => {
 
         {/* Social Icons */}
         <div className="flex gap-4 bg-[#0b1a3a] px-4 py-2 rounded-full">
-          <a href="#" className="hover:text-indigo-400 transition">
-            <Facebook size={18} />
+          <a href="tel:0842347310" className="hover:text-indigo-400 transition">
+            <Phone size={18} />
           </a>
-          <a href="#" className="hover:text-indigo-400 transition">
-            <Twitter size={18} />
+          <a href="mailto:mlangaviclyde@gmail.com" className="hover:text-indigo-400 transition">
+            <Mail size={18} />
           </a>
-          <a href="#" className="hover:text-indigo-400 transition">
+          <a 
+            href="https://wa.me/+27685021117"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-indigo-400 transition">
+            <FaWhatsapp size={18} />
+          </a>
+          <a href="https://www.linkedin.com/in/langavi-makhubele-clyde/" className="hover:text-indigo-400 transition">
             <Linkedin size={18} />
-          </a>
-          <a href="#" className="hover:text-indigo-400 transition">
-            <Instagram size={18} />
           </a>
         </div>
 
@@ -67,7 +74,7 @@ const HomePage = () => {
         </div>
 
         {/* Desktop Links */}
-        <ul className="hidden text-sm font-semibold md:flex gap-8 text-gray-700">
+        <ul className="hidden text-[14px] font-semibold md:flex gap-8 text-gray-700">
           {navLinks.map((link) => (
             <li key={link.name}>
               {link.isScroll ? (
@@ -98,9 +105,16 @@ const HomePage = () => {
         </ul>
 
         {/* Quote Button */}
-        <button className="hidden text-sm font-semibold md:block bg-indigo-600 hover:bg-indigo-700 px-5 py-2 rounded-full text-white font-medium">
+        
+        <ScrollLink
+          to="contact"
+          smooth={true}
+          duration={600}
+          offset={-80}
+          className="hidden text-sm font-semibold md:block bg-indigo-600 hover:bg-indigo-700 px-5 py-2 rounded-full text-white font-medium cursor-pointer"
+        >
           Get A Quote
-        </button>
+        </ScrollLink>
 
         {/* Hamburger Menu */}
         <button
@@ -208,12 +222,22 @@ const HomePage = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <button className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-full font-medium">
+            <Link 
+              to="/servicesProvider"
+              className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-full font-medium">
               Explore More
-            </button>
-            <button className="w-full sm:w-auto border border-indigo-600 hover:bg-indigo-600 hover:text-white px-6 py-3 rounded-full font-medium">
-              View All Services
-            </button>
+            </Link>
+
+            {/* Scroll to Services section */}
+            <ScrollLink
+              to="services"
+              smooth={true}
+              duration={600}
+              offset={-80}
+              className="w-full sm:w-auto border border-indigo-600 hover:bg-indigo-600 hover:text-white px-6 py-3 rounded-full font-medium transition cursor-pointer"
+            >
+              View Services
+            </ScrollLink>
           </div>
         </div>
       </section>
@@ -221,20 +245,22 @@ const HomePage = () => {
 
 
       {/* Services Strip */}
-      <section className="bg-indigo-600 text-white py-6">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-center font-base">
-          <ScrollVelocity
-            texts={[
-              'Website Development',
-              <Sparkle key="icon1" />,
-              'Search Engine Optimization',
-              <Sparkle key="icon2" />,
-              'Web Maintenance',
-              <Sparkle key="icon3" />
-            ]}
-            velocity={velocity}
-            className="custom-scroll-text text-xl font-semibold tracking-wide mx-6 [&_svg]:inline [&_svg]:align-middle [&_svg]:translate-y-[2px]"
-          />
+      <section className="bg-indigo-600 text-white py-6 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-center font-base">
+            <ScrollVelocity
+              texts={[
+                'Website Development',
+                <Sparkle key="icon1" />,
+                'Search Engine Optimization',
+                <Sparkle key="icon2" />,
+                'Web Maintenance',
+                <Sparkle key="icon3" />,
+              ]}
+              velocity={velocity}
+              className="custom-scroll-text text-xl font-semibold tracking-wide mx-6 [&_svg]:inline [&_svg]:align-middle [&_svg]:translate-y-[2px]"
+            />
+          </div>
         </div>
       </section>
 
@@ -248,24 +274,25 @@ const HomePage = () => {
         <ServicesSection />
       </section>
 
-      {/* Services Section */}
-      <section>
+      <section id="work-process">
         <WorkProcess />
           {/* Services Strip */}
-          <section className="bg-indigo-600 text-white py-6">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-center font-base">
-              <ScrollVelocity
-                texts={[
-                  'Website Development',
-                  <Sparkle key="icon1" />,
-                  'Search Engine Optimization',
-                  <Sparkle key="icon2" />,
-                  'Web Maintenance',
-                  <Sparkle key="icon3" />
-                ]}
-                velocity={velocity}
-                className="custom-scroll-text text-xl font-semibold tracking-wide mx-6 [&_svg]:inline [&_svg]:align-middle [&_svg]:translate-y-[2px]"
-              />
+          <section className="bg-indigo-600 text-white py-6 overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-center font-base">
+                <ScrollVelocity
+                  texts={[
+                    'Website Development',
+                    <Sparkle key="icon1" />,
+                    'Search Engine Optimization',
+                    <Sparkle key="icon2" />,
+                    'Web Maintenance',
+                    <Sparkle key="icon3" />,
+                  ]}
+                  velocity={velocity}
+                  className="custom-scroll-text text-xl font-semibold tracking-wide mx-6 [&_svg]:inline [&_svg]:align-middle [&_svg]:translate-y-[2px]"
+                />
+              </div>
             </div>
           </section>
       </section>
@@ -276,45 +303,49 @@ const HomePage = () => {
       </section>
 
       {/* Projects Section */}
-      <section id='contact'>
+      <section id='contacts'>
         <ContactSection />
           {/* Services Strip */}
-          <section className="bg-indigo-600 text-white py-6">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-center font-base">
-              <ScrollVelocity
-                texts={[
-                  'Website Development',
-                  <Sparkle key="icon1" />,
-                  'Search Engine Optimization',
-                  <Sparkle key="icon2" />,
-                  'Web Maintenance',
-                  <Sparkle key="icon3" />
-                ]}
-                velocity={velocity}
-                className="custom-scroll-text text-xl font-semibold tracking-wide mx-6 [&_svg]:inline [&_svg]:align-middle [&_svg]:translate-y-[2px]"
-              />
+          <section className="bg-indigo-600 text-white py-6 overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-center font-base">
+                <ScrollVelocity
+                  texts={[
+                    'Website Development',
+                    <Sparkle key="icon1" />,
+                    'Search Engine Optimization',
+                    <Sparkle key="icon2" />,
+                    'Web Maintenance',
+                    <Sparkle key="icon3" />,
+                  ]}
+                  velocity={velocity}
+                  className="custom-scroll-text text-xl font-semibold tracking-wide mx-6 [&_svg]:inline [&_svg]:align-middle [&_svg]:translate-y-[2px]"
+                />
+              </div>
             </div>
           </section>
       </section>
 
       {/* Testimonials Section */}
-      <section>
+      <section id="testimonials">
         <Testimonials />
           {/* Services Strip */}
-          <section className="bg-indigo-600 text-white py-6">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-center font-base">
-              <ScrollVelocity
-                texts={[
-                  'Website Development',
-                  <Sparkle key="icon1" />,
-                  'Search Engine Optimization',
-                  <Sparkle key="icon2" />,
-                  'Web Maintenance',
-                  <Sparkle key="icon3" />
-                ]}
-                velocity={velocity}
-                className="custom-scroll-text text-xl font-semibold tracking-wide mx-6 [&_svg]:inline [&_svg]:align-middle [&_svg]:translate-y-[2px]"
-              />
+          <section className="bg-indigo-600 text-white py-6 overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-center font-base">
+                <ScrollVelocity
+                  texts={[
+                    'Website Development',
+                    <Sparkle key="icon1" />,
+                    'Search Engine Optimization',
+                    <Sparkle key="icon2" />,
+                    'Web Maintenance',
+                    <Sparkle key="icon3" />,
+                  ]}
+                  velocity={velocity}
+                  className="custom-scroll-text text-xl font-semibold tracking-wide mx-6 [&_svg]:inline [&_svg]:align-middle [&_svg]:translate-y-[2px]"
+                />
+              </div>
             </div>
           </section>
       </section>
